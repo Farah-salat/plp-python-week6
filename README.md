@@ -1,12 +1,10 @@
-# Assignment: Times Tables, Skip Counting & Loop Hospital
+# PLP Python Week 6 - Safe Functions
 
 ## Files
 
-* `times_table.py` — Uses a `for` loop and `range(1, 11)` to generate a multiplication table from 1 to 10.
-* `skip_counter.py` — Uses `range()` with positive and negative steps to print even numbers and a countdown.
-* `loop_hospital.py` — Fixes three common loop problems: an off-by-one error, an infinite loop, and a misplaced accumulator.
-* `screenshots/` — Contains screenshots showing the three programs running successfully.
+* `safe_tools.py` — Contains three functions that handle division errors, invalid number conversions, and missing dictionary keys.
+* `README.md` — Describes the assignment files and explains why exception handling is necessary.
 
-## Off-by-One Errors and range()
+## Why can't an if check catch `abc` on its own?
 
-An off-by-one error happens when a loop runs one time too many or one time too few because the starting or stopping boundary is incorrect. A useful `range()` habit is to remember that the stop value is excluded, so I should choose the stop value carefully, often using one number higher when I need to include the final number.
+An `if` statement can check conditions, but converting `"abc"` to an integer using `int()` raises a `ValueError` before a normal numeric check can be performed. Using `try` and `except ValueError` catches the conversion error and allows the program to return `"Not a number"` instead of crashing.
